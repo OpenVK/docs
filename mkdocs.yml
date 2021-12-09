@@ -1,0 +1,77 @@
+site_name: OpenVK Documentation
+theme:
+  name: material
+  logo: assets/logo.svg
+  favicon: assets/favicon.png
+  palette:
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
+      primary: grey
+      accent: blue
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" 
+      scheme: slate
+      primary: grey
+      accent: blue
+      toggle:
+        icon: material/lightbulb 
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+
+repo_url: https://github.com/openvk/docs
+repo_name: openvk/docs
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/openvk/openvk
+      name: OpenVK on GitHub
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/openvkch
+      name: OpenVK on Telegram
+    - icon: fontawesome/brands/mastodon
+      link: https://fosstodon.org/@openvk
+      name: OpenVK on Mastodon
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:openvk@tutanota.com
+      name: Mail OpenVK
+
+markdown_extensions:
+
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
