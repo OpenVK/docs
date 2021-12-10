@@ -9,14 +9,14 @@ theme:
       primary: grey
       accent: blue
       toggle:
-        icon: material/lightbulb-outline
+        icon: material/lightbulb
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)" 
       scheme: slate
       primary: grey
       accent: blue
       toggle:
-        icon: material/lightbulb 
+        icon: material/lightbulb-outline
         name: Switch to light mode
   icon:
     repo: fontawesome/brands/github
@@ -25,6 +25,20 @@ theme:
 
 repo_url: https://github.com/openvk/docs
 repo_name: openvk/docs
+
+nav:
+  - 'Main page': 'index.md'
+  - Chandler:
+    - 'chandler/about.md'
+    - 'chandler/installing.md'
+  - 'OpenVK Engine':
+    - 'openvk_engine/about.md'
+    - 'API':
+      - 'openvk_engine/api/description.md'
+    - 'Tutorials':
+      - 'openvk_engine/centos8_installation.md'
+
+copyright: Copyright &copy; 2021 OpenVK Team and contributors
 
 extra:
   social:

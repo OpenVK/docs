@@ -1,6 +1,6 @@
 # Installing OpenVK on CentOS 8
 
-This is a guide made specifically for CentOS 8 that is based on [@rem-pai](https://github.com/rem-pai)'s way to install OpenVK modified by WerySkok. 
+This is an example guide made specifically for CentOS 8 that is based on [@rem-pai](https://github.com/rem-pai)'s way to install OpenVK modified by WerySkok. 
 
 !!! caution
     CentOS 8 is reaching it's end-of-life soon. There are other supported similar distributions like Rocky Linux or AlmaLinux.
