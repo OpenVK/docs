@@ -55,6 +55,9 @@ extra:
       link: mailto:openvk@tutanota.com
       name: Mail OpenVK
 
+plugins:
+  - git-revision-date
+
 markdown_extensions:
 
   # Python Markdown
