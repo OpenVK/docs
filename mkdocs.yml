@@ -37,6 +37,7 @@ nav:
       - 'openvk_engine/api/description.md'
     - 'Tutorials':
       - 'openvk_engine/centos8_installation.md'
+      - 'openvk_engine/themepack_creation.md'
 
 copyright: Copyright &copy; 2021 OpenVK Team and contributors
 
