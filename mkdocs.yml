@@ -23,8 +23,8 @@ theme:
   features:
     - navigation.instant
 
-repo_url: https://github.com/openvk/openvk
-repo_name: OpenVK
+repo_url: https://github.com/openvk/docs # it's a link to DOCS repo, other buttons like edit will also redirect there
+repo_name: openvk/docs
 
 nav:
   - 'Main page': 'index.md'
