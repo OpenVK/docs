@@ -35,6 +35,7 @@ nav:
     - 'openvk_engine/about.md'
     - 'API':
       - 'openvk_engine/api/description.md'
+      - 'openvk_engine/api/api.md'
     - 'Tutorials':
       - 'openvk_engine/centos8_installation.md'
       - 'openvk_engine/themepack_creation.md'
