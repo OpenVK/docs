@@ -239,6 +239,12 @@ Fields: **owner_id**, offset, count, extended
 
 Returns the posts on the wall. `Extended` parameter will also return profile info.
 
+### `getById`
+
+Fields: **posts**, fields, extended
+
+Returns post(s) by pretty ID (like 1_3 or 32_3).
+
 ### `post` 🔰
 
 Fields: **owner_id**, **message**, from_group, signed
@@ -246,6 +252,14 @@ Fields: **owner_id**, **message**, from_group, signed
 Creates new post on wall.
 
 Also, there is the way to upload picture or video, just send the media named "photo" or "video" in your post request.
+
+## Newsfeed
+
+### `get` 🔰
+
+Fields: fields, start_from or offset, count, extended
+
+Returns posts from newsfeed.
 
 # Error
 
