@@ -132,6 +132,13 @@ Returns the user's groups (or IDs if advanced is 0) list with count.
 
 `fields`: `verified`, `has_photo`, `photo_max_orig`, `photo_max`
 
+### `getById`
+
+Fields: **groups_id** or **group_id**, fields
+
+Returns the info about group(s).
+
+`fields`: `verified`, `has_photo`, `photo_max_orig`, `photo_max`, `members_count`, `site`, `description`, `contacts`, `can_post`
 
 ## Messages
 
