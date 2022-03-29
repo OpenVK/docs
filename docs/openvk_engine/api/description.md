@@ -268,6 +268,26 @@ Fields: `fields`, `start_from` or `offset`, `count`, `extended`
 
 Returns posts from newsfeed.
 
+## Likes
+
+### `add` 🔰
+
+Fields: type, owner_id, item_id
+
+Likes the post. Returns count of likes.
+
+### `remove` 🔰
+
+Fields: type, owner_id, item_id
+
+Removes like from the post. Returns count of likes.
+
+### `isLiked` 🔰
+
+Fields: user_id, type, owner_id, item_id
+
+Checks if user liked the post or not
+
 # Error
 
 If something goes wrong, the server will return you an error like this:
