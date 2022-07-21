@@ -276,7 +276,7 @@ Fields: type, owner_id, item_id
 
 Likes the post. Returns count of likes.
 
-### `remove` 🔰
+### `delete` 🔰
 
 Fields: type, owner_id, item_id
 
