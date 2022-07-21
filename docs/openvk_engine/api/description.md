@@ -172,6 +172,12 @@ Fields: `offset`, `count` _20_, `filter`, `extended`
 
 Returns user's chat list.
 
+### `getConversationsById` 🔰
+
+Fields: **`peer_ids`**, `extended`, `fields`
+
+Returns the user's chats by their peer IDs.
+
 ### `getHistory` 🔰
 
 Fields: `offset`, `user_id`, `peer_id`, `start_message_id`, `rev`, `extended`
@@ -207,6 +213,16 @@ Returns the information about access token.
 ### `chickenWings`
 
 Returns `крылышки` string.
+
+### `aboutInstance`
+
+Fields: **`fields`**, `admin_fields`, `group_fields`.
+
+Returns information about the instance, including stats, administrators, most popular groups and links.
+
+`fields`: `statistics`, `administrators`, `popular_groups`, `links`
+
+`admin_fields` are the same as with `Users.get` function.`group_fields` are the same as with `Groups.getById` function.
 
 ## Utils
 
@@ -276,7 +292,7 @@ Fields: type, owner_id, item_id
 
 Likes the post. Returns count of likes.
 
-### `remove` 🔰
+### `delete` 🔰
 
 Fields: type, owner_id, item_id
 
