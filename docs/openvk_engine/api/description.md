@@ -37,7 +37,7 @@ Returns the info about account.
     "response":
     {
         "first_name": "Vladimir",
-        "id":1,
+        "id": 1,
         "last_name": "Barinov",
         "home_town": "Moscow",
         "status": "Status example",
@@ -58,18 +58,18 @@ Returns the info about account.
 
 ```json
 {
-    "response":{
-        "2fa_required":0,
-        "country":"CZ",
-        "eu_user":false,
-        "https_required":1,
-        "intro":0,
-        "community_comments":false,
-        "is_live_streaming_enabled":false,
-        "is_new_live_streaming_enabled":false,
-        "lang":1,
-        "no_wall_replies":0,
-        "own_posts_default":0
+    "response": {
+        "2fa_required": 0,
+        "country": "CZ",
+        "eu_user": false,
+        "https_required": 1,
+        "intro": 0,
+        "community_comments": false,
+        "is_live_streaming_enabled": false,
+        "is_new_live_streaming_enabled": false,
+        "lang": 1,
+        "no_wall_replies": 0,
+        "own_posts_default": 0
     }
 }
 ```
@@ -98,22 +98,6 @@ Fields: **`user_id`**, `fields`, `offset`, `count`
 
 Returns the user's friend ID list with count.
 
-### `add` 🔰
-
-Fields: **`user_id`**
-
-Sends a requests to another user or adds user to friends list.
-
-Returns: `1` (friend request sent) or `2` (request from user approved)
-
-### `remove` 🔰
-
-Fields: **`user_id`**
-
-Removes the user from friend list or the request.
-
-Returns `1` if successed, otherwise will throw an error.
-
 ### `getLists` 🔰
 
 Dummy function, always returns 0 items.
@@ -122,15 +106,56 @@ Dummy function, always returns 0 items.
 
 Dummy functions, always return `1`.
 
+### `add` 🔰
+
+Fields: **`user_id`**
+
+Sends a requests to another user or adds user to friends list.
+
+Returns: `1` (friend request sent) or `2` (request from user approved)
+
+### `delete` 🔰
+
+Fields: **`user_id`**
+
+Removes the user from friend list or the request.
+
+Returns `1` if successed, otherwise will throw an error.
+
+### `areFriends` 🔰
+
+Fields: **`user_ids`**
+
+Checks the friendship status with other specified users.
+
+```json
+{
+    "response": [
+        {
+            "friend_status": 2,
+            "user_id": 2
+        },
+        {
+            "friend_status": 3,
+            "user_id": 1
+        },
+        {
+            "friend_status": 1,
+            "user_id": 6
+        }
+    ]
+}
+```
+
 ## Groups
 
-### `get`
+### `get` 🔰
 
-Fields: `user_id`, `advanced`, `fields`, `offset`, `count`
+Fields: `user_id`, `fields`, `offset`, `count` _6_
 
-Returns the user's groups (or IDs if advanced is 0) list with count.
+Returns the user's groups list with count.
 
-`fields`: `verified`, `has_photo`, `photo_max_orig`, `photo_max`
+`fields`: `verified`, `has_photo`, `photo_max_orig`, `photo_max`, `photo_50`, `photo_100`, `photo_200`, `photo_200_orig`, `photo_400_orig`, `members_count`
 
 ### `getById`
 
@@ -138,7 +163,7 @@ Fields: **`groups_id`** or **`group_id`**, `fields`
 
 Returns the info about group(s).
 
-`fields`: `verified`, `has_photo`, `photo_max_orig`, `photo_max`, `members_count`, `site`, `description`, `contacts`, `can_post`
+`fields`: `verified`, `has_photo`, `photo_max_orig`, `photo_max`, `photo_50`, `photo_100`, `photo_200`, `photo_200_orig`, `photo_400_orig`, `members_count`, `site`, `description`, `contacts`, `can_post`
 
 ## Messages
 
@@ -180,7 +205,7 @@ Returns the user's chats by their peer IDs.
 
 ### `getHistory` 🔰
 
-Fields: `offset`, `user_id`, `peer_id`, `start_message_id`, `rev`, `extended`
+Fields: `offset`, `count` _20_, `user_id`, `peer_id`, `start_message_id`, `rev`
 
 Returns chat's history.
 
@@ -232,23 +257,23 @@ Returns the time on the server.
 
 ## Users
 
-### `get` 🔰
+### `get`
 
 Fields: **`user_ids`**, `fields`, `offset`, `count`.
 
 Returns information about user or users.
 
-`fields`: `verified`, `sex` (not the orientation but the gender), `has_photo`, `photo_max_orig`, `photo_max`, `status`, `screen_name` (aka short url), `friend_status`, `last_seen`, `music`, `movies`, `tv`, `books`, `city`, `interests`
+`fields`: `verified`, `sex` (not the orientation but the gender), `has_photo`, `photo_max_orig`, `photo_max`, `photo_50`, `photo_100`, `photo_200`, `photo_200_orig`, `photo_400_orig`, `status`, `screen_name` (aka short url), `friend_status`, `last_seen`, `music`, `movies`, `tv`, `books`, `city`, `interests`
 
 ### `getFollowers` 🔰
 
-Fields: **`user_id`**, `fields`, `offset`, `count`
+Fields: **`user_id`**, `fields`, `offset`, `count` _100_
 
 Returns the followers of user.
 
 ### `search`
 
-Fields: **`q`**, `fields`, `offset`, `count`
+Fields: **`q`**, `fields`, `offset`, `count` _100_
 
 Searches the users by name, surname or bio, and returns the list.
 
@@ -258,11 +283,11 @@ Searches the users by name, surname or bio, and returns the list.
 
 ### `get`
 
-Fields: **`owner_id`**, `offset`, `count`, `extended`
+Fields: **`owner_id`**, `offset`, `count` _30_, `extended`
 
 Returns the posts on the wall. `Extended` parameter will also return profile info.
 
-### `getById`
+### `getById` 🔰
 
 Fields: **`posts`**, `fields`, `extended`
 
@@ -276,6 +301,12 @@ Creates new post on wall.
 
 Also, there is a way to upload picture or video, just send the media named "photo" or "video" in your post request.
 
+### `repost` 🔰
+
+Fields: **`object`**, `message`
+
+Reposts (copies) a post to a user wall by pretty ID (like wall-1246_747 or wall6_436).
+
 ## Newsfeed
 
 ### `get` 🔰
@@ -288,21 +319,21 @@ Returns posts from newsfeed.
 
 ### `add` 🔰
 
-Fields: type, owner_id, item_id
+Fields: `type`, `owner_id`, `item_id`
 
 Likes the post. Returns count of likes.
 
 ### `delete` 🔰
 
-Fields: type, owner_id, item_id
+Fields: `type`, `owner_id`, `item_id`
 
 Removes like from the post. Returns count of likes.
 
 ### `isLiked` 🔰
 
-Fields: user_id, type, owner_id, item_id
+Fields: `user_id`, `type`, `owner_id`, `item_id`
 
-Checks if user liked the post or not
+Checks if user liked the post or not.
 
 # Error
 
@@ -310,29 +341,29 @@ If something goes wrong, the server will return you an error like this:
 
 ```json
 {
-    "error_code":28,
-    "error_msg":"Invalid username or password",
+    "error_code": 28,
+    "error_msg": "Invalid username or password",
     "request_params":
     [
         {
-            "key":"grant_type",
-            "value":"password"
+            "key": "grant_type",
+            "value": "password"
         },
         {
-            "key":"password",
-            "value":"agreatpassword"
+            "key": "password",
+            "value": "agreatpassword"
         },
         {
-            "key":"username",
-            "value":"cooluser@cock.li"
+            "key": "username",
+            "value": "cooluser@cock.li"
         },
         {
-            "key":"method",
-            "value":"internal.acquireToken"
+            "key": "method",
+            "value": "internal.acquireToken"
         },
         {
-            "key":"oauth",
-            "value":1
+            "key": "oauth",
+            "value": 1
         }
     ]
 }

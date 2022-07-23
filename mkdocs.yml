@@ -23,7 +23,7 @@ theme:
   features:
     - navigation.instant
 
-repo_url: https://github.com/openvk/docs # it's a link to DOCS repo, other buttons like edit will also redirect there
+repo_url: https://github.com/openvk/docs
 repo_name: openvk/docs
 
 nav:
@@ -40,7 +40,7 @@ nav:
       - 'openvk_engine/themepack_creation.md'
       - 'openvk_engine/ton_integration.md'
 
-copyright: Copyright &copy; 2021 OpenVK Team and contributors
+copyright: Copyright &copy; 2021-2022 OpenVK Team and contributors
 
 extra:
   social:
