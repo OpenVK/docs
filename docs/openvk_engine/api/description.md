@@ -30,7 +30,7 @@ If you have two-factor authorization turned on, add a `code` field to your POST 
 
 ### `getProfileInfo` 🔰
 
-Returns the info about account. 
+Returns the info about account.
 
 ```json
 {
@@ -163,7 +163,33 @@ Fields: **`groups_id`** or **`group_id`**, `fields`
 
 Returns the info about group(s).
 
-`fields`: `verified`, `has_photo`, `photo_max_orig`, `photo_max`, `photo_50`, `photo_100`, `photo_200`, `photo_200_orig`, `photo_400_orig`, `members_count`, `site`, `description`, `contacts`, `can_post`
+`fields`: `verified`, `has_photo`, `photo_max_orig`, `photo_max`, `photo_50`, `photo_100`, `photo_200`, `photo_200_orig`, `photo_400_orig`, `members_count`, `site`, `description`, `contacts`, `can_post`, `is_member`
+
+## Likes
+
+### `add` 🔰
+
+Fields: `type`, `owner_id`, `item_id`
+
+Likes the object. Returns count of likes.
+
+`type`: `post`
+
+### `delete` 🔰
+
+Fields: `type`, `owner_id`, `item_id`
+
+Removes like from the object. Returns count of likes.
+
+`type`: `post`
+
+### `isLiked` 🔰
+
+Fields: `user_id`, `type`, `owner_id`, `item_id`
+
+Checks if user liked the object or not.
+
+`type`: `post`
 
 ## Messages
 
@@ -307,6 +333,30 @@ Fields: **`object`**, `message`
 
 Reposts (copies) a post to a user wall by pretty ID (like wall-1246_747 or wall6_436).
 
+### `createComment` 🔰
+
+Fields: **`owner_id`**, **`post_id`**, **`message`**, `from_group`
+
+Adds a comment to a post on a user wall or community wall.
+
+### `deleteComment` 🔰
+
+Fields: **`comment_id`**
+
+Deletes a comment on a post on a user wall or community wall.
+
+### `getComment` 🔰
+
+Fields: **`owner_id`**, **`comment_id`**, `extended`, `fields`
+
+Returns the info about comment.
+
+### `getComments` 🔰
+
+Fields: **`owner_id`**, **`post_id`**, `need_likes`, `offset`, `count` _10_, `fields`, `sort`, `extended`
+
+Returns a list of comments on a post on a user wall or community wall.
+
 ## Newsfeed
 
 ### `get` 🔰
@@ -314,26 +364,6 @@ Reposts (copies) a post to a user wall by pretty ID (like wall-1246_747 or wall6
 Fields: `fields`, `start_from` or `offset`, `count`, `extended`
 
 Returns posts from newsfeed.
-
-## Likes
-
-### `add` 🔰
-
-Fields: `type`, `owner_id`, `item_id`
-
-Likes the post. Returns count of likes.
-
-### `delete` 🔰
-
-Fields: `type`, `owner_id`, `item_id`
-
-Removes like from the post. Returns count of likes.
-
-### `isLiked` 🔰
-
-Fields: `user_id`, `type`, `owner_id`, `item_id`
-
-Checks if user liked the post or not.
 
 # Error
 
