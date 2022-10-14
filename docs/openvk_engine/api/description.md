@@ -281,6 +281,26 @@ Returns information about the instance, including stats, administrators, most po
 
 `admin_fields` are the same as with `Users.get` function.`group_fields` are the same as with `Groups.getById` function.
 
+## Polls
+
+### `getById`
+
+Fields: **`poll_id`**, `extended`, `fields`
+
+Returns poll info. Formatting is the same as it would be in Wall's methods.
+
+### `addVote` 🔰
+
+Fields: **`poll_id`**, **`answers_ids`**
+
+Adds a vote to poll.
+
+### `removeVote` 🔰
+
+Fields: **`poll_id`**
+
+Removes the vote, except if it is not revotable or it is locked.
+
 ## Utils
 
 ### `getServerTime`
