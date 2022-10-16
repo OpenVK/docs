@@ -295,7 +295,7 @@ Fields: **`poll_id`**, **`answers_ids`**
 
 Adds a vote to poll.
 
-### `removeVote` 🔰
+### `deleteVote` 🔰
 
 Fields: **`poll_id`**
 
