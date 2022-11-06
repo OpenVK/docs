@@ -171,6 +171,18 @@ Fields: **`q`**, `offset`, `count`
 
 Searches for groups.
 
+### `join`
+
+Fields: **`group_id`**
+
+Joins the group. Returns 1 on success.
+
+### `leave`
+
+Fields: **`group_id`**
+
+Leaves the group. Returns 1 on success.
+
 ## Likes
 
 ### `add` 🔰
