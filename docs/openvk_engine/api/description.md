@@ -391,6 +391,10 @@ Fields: `fields`, `start_from` or `offset`, `count`, `extended`
 
 Returns posts from newsfeed.
 
+### `getGlobal` 🔰
+
+Same as `get`, but this time it outputs global feed.
+
 # Error
 
 If something goes wrong, the server will return you an error like this:
