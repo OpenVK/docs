@@ -98,6 +98,12 @@ Fields: **`user_id`**, `fields`, `offset`, `count`
 
 Returns the user's friend ID list with count.
 
+### `getRequests`
+
+Fields: `fields`, `offset`, `count`, `extended`
+
+Returns current user's requests.
+
 ### `getLists` 🔰
 
 Dummy function, always returns 0 items.
