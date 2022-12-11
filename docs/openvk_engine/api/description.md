@@ -165,7 +165,7 @@ Returns the user's groups list with count.
 
 ### `getById`
 
-Fields: **`groups_id`** or **`group_id`**, `fields`
+Fields: **`group_ids`** or **`group_id`**, `fields`
 
 Returns the info about group(s).
 
@@ -243,7 +243,7 @@ Restores deleted message.
 
 ### `getConversations` 🔰
 
-Fields: `offset`, `count` _20_, `filter`, `extended`
+Fields: `offset`, `count` _20_, `filter`, `extended`, `fields`
 
 Returns user's chat list.
 
@@ -255,7 +255,7 @@ Returns the user's chats by their peer IDs.
 
 ### `getHistory` 🔰
 
-Fields: `offset`, `count` _20_, `user_id`, `peer_id`, `start_message_id`, `rev`
+Fields: `offset`, `count` _20_, `user_id`, `peer_id`, `start_message_id`, `rev`, `extended`, `fields`
 
 Returns chat's history.
 
@@ -353,7 +353,7 @@ Searches the users by name, surname or bio, and returns the list.
 
 ### `get`
 
-Fields: **`owner_id`**, `offset`, `count` _30_, `extended`
+Fields: **`owner_id`**, `domain`, `offset`, `count` _30_, `extended`
 
 Returns the posts on the wall. `Extended` parameter will also return profile info.
 
