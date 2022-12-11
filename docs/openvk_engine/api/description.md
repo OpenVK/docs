@@ -92,7 +92,7 @@ Returns the counters of Unread `Messages`, `Notifications` and `Friends` Request
 
 ## Friends
 
-### `get`
+### `get` 🔰
 
 Fields: **`user_id`**, `fields`, `offset`, `count`
 
@@ -177,13 +177,13 @@ Fields: **`q`**, `offset`, `count`
 
 Searches for groups.
 
-### `join`
+### `join` 🔰
 
 Fields: **`group_id`**
 
 Joins the group. Returns 1 on success.
 
-### `leave`
+### `leave` 🔰
 
 Fields: **`group_id`**
 
