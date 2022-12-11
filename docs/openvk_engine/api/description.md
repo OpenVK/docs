@@ -54,7 +54,7 @@ Returns the info about account.
 
 ### `getInfo` 🔰
 
-*This is a dummy function*
+*This is a dummy function*, except `2fa_required`
 
 ```json
 {
