@@ -16,6 +16,7 @@ Updating the source code is done with this command: `git pull --recurse-submodul
 
 * **[openvk.su](https://openvk.su/)**
 * [social.fetbuk.ru](http://social.fetbuk.ru/)
+* [vepurovk.xyz](https://vepurovk.xyz/)
 
 ## Can I create my own OpenVK instance?
 
