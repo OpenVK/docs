@@ -351,7 +351,7 @@ Searches the users by name, surname or bio, and returns the list.
 
 ## Wall
 
-### `get`
+### `get` 🔰
 
 Fields: **`owner_id`**, `offset`, `count` _30_, `extended`
 
