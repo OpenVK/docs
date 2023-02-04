@@ -177,13 +177,13 @@ Fields: **`q`**, `offset`, `count`
 
 Searches for groups.
 
-### `join`
+### `join` 🔰
 
 Fields: **`group_id`**
 
 Joins the group. Returns 1 on success.
 
-### `leave`
+### `leave` 🔰
 
 Fields: **`group_id`**
 
@@ -295,9 +295,11 @@ Fields: **`fields`**, `admin_fields`, `group_fields`.
 
 Returns information about the instance, including stats, administrators, most popular groups and links.
 
-`fields`: `statistics`, `administrators`, `popular_groups`, `links`
+`fields`: `statistics`, `administrators`, ~~`popular_groups`~~, `links`
 
 `admin_fields` are the same as with `Users.get` function.`group_fields` are the same as with `Groups.getById` function.
+
+**Field popular_groups is temporarily down and causing a server error**
 
 ## Polls
 
