@@ -2,7 +2,7 @@
 
 OpenVK API is based on VKontakte's API for compatibility. If you want to improve the API, then read [this page](https://github.com/openvk/openvk/blob/master/VKAPI/README.md).
 
-To call the function, you need to go to `/method/` URL, and then, the function name, for example: `/method/Account.getProfileInfo`. The server will return JSON data. You can use GET or POST to send the Data.
+To call the function, you need to go to `{YOUR DOMAIN}/method/` URL, and then, the function name, for example: `{YOUR DOMAIN}/method/Account.getProfileInfo`. The server will return JSON data. You can use GET or POST to send the Data.
 
 🔰 above the function name means it requires authorization.
 
@@ -10,7 +10,7 @@ To call the function, you need to go to `/method/` URL, and then, the function n
 
 To get token, you should call the "token" page:
 
-`/token?username={YOUR USERNAME}&password={YOUR PASSWORD}&grant_type=password`
+`{YOUR DOMAIN}/token?username={YOUR USERNAME}&password={YOUR PASSWORD}&grant_type=password`
 
 You'll get a response like this:
 
@@ -90,6 +90,62 @@ Dummy function, always returns `9355263`.
 
 Returns the counters of Unread `Messages`, `Notifications` and `Friends` Requests.
 
+## Board
+
+### `addTopic` 🔰
+
+Fields: **`groupd_id`**, **`title`**, `text`, `from_group`, `attachments`
+
+Creates the topic in the group.
+
+### `closeTopic` 🔰
+
+Fields: **`groupd_id`**, **`topic_id`**
+
+### `createComment` 🔰
+
+Fields: **`groupd_id`**, **`topic_id`**, `message`, `from_group`, `attachments`
+
+### `deleteComment` 🔰
+
+Fields: **`comment_id`**, `group_id`, `topic_id`
+
+### `deleteTopic` 🔰
+
+Fields: **`group_id`**, **`topic_id`**
+
+### `editTopic` 🔰
+
+Fields: **`group_id`**, **`topic_id`**, **`title`**
+
+### `fixTopic` 🔰
+
+Fields: **`group_id`**, **`topic_id`**
+
+Pin the topic. IDK why it was named "fix topic" xd
+
+### `getComments` 🔰
+
+Fields: **`group_id`**, **`topic_id`**, `need_likes`, `start_comment_id`, `offset`, `count`, `extended`, `sort` (asc or desc)
+
+### `getTopics` 🔰
+
+Fields: **`group_id`**, **`topic_ids`**, `order`, `offset`, `count`, `extended`, `preview`, `preview_length`
+
+### `openTopic` 🔰
+
+Fields: **`group_id`**, **`topic_id`**
+
+### `restoreComment` 🔰
+
+Fields: **`group_id`**, **`topic_id`**, **`comment_id`**
+
+### `unfixTopic` 🔰
+
+Fields: **`group_id`**, **`topic_id`**
+
+Unpin the topic.
+
 ## Friends
 
 ### `get`
@@ -153,7 +209,42 @@ Checks the friendship status with other specified users.
 }
 ```
 
+## Gifts
+
+### `get` 🔰
+
+Fields: **`user_id`**, `offset`, `count`
+
+### `send` 🔰
+
+Fields: **`user_id`**, **`gift_id`**, `message`, `privacy`
+
+### `getCategories` 🔰
+
+Fields: `extended`, `page`
+
+!!! caution 
+    Non-standard method, please be aware if you'll gonna make your thing compatible with real VK.
+
+### `getGiftsInCategory` 🔰
+
+Fields: **`id`**, `page`
+
+!!! caution 
+    Non-standard method, please be aware if you'll gonna make your thing compatible with real VK.
+
 ## Groups
+
+### `create` 🔰
+
+Fields: **`title`**, `description`
+
+### `edit` 🔰
+
+Fields: **`group_id`**, `title`, `description`, `screen_name`, `website`, `wall`, `topics`, `adminlist`, `topicsAboveWall`, `hideFromGlobalFeed`
+
+- `title`, `description`, `screen_name` and `website` are strings
+- `wall`, `topics`, `adminlist`, `topicsAboveWall`, `hideFromGlobalFeed` are integers
 
 ### `get` 🔰
 
@@ -163,13 +254,29 @@ Returns the user's groups list with count.
 
 `fields`: `verified`, `has_photo`, `photo_max_orig`, `photo_max`, `photo_50`, `photo_100`, `photo_200`, `photo_200_orig`, `photo_400_orig`, `members_count`
 
-### `getById`
+### `getById` 🔰
 
 Fields: **`groups_id`** or **`group_id`**, `fields`
 
 Returns the info about group(s).
 
 `fields`: `verified`, `has_photo`, `photo_max_orig`, `photo_max`, `photo_50`, `photo_100`, `photo_200`, `photo_200_orig`, `photo_400_orig`, `members_count`, `site`, `description`, `contacts`, `can_post`, `is_member`
+
+### `getMembers` 🔰
+
+Fields: **`group_id`**, `sort`, `offset`, `count`, `fields`, `filter`
+
+`fields`: `bdate`, `can_post`, `can_see_all_posts`, `can_see_audio` (lol), `can_write_private_message`,`city`, `common_count`, `connections`, `contacts`,`country`, `domain`, `education`, `has_mobile`, `last_seen`, `lists`, `online`, `online_mobile`,`photo_100`, `photo_200`, `photo_200_orig`,`photo_400_orig`, `photo_50`, `photo_max`, `photo_max_orig`, `relation`, `relatives`, `schools`, `sex`, `site`, `status`, `universities`
+
+### `getSettings` 🔰
+
+Fields: **`group_id`**
+
+Available only for group admins.
+
+### `isMember` 🔰
+
+Fields: **`group_id`**, **`user_id`** or **`user_ids`**, `extended`
 
 ### `search`
 
@@ -229,6 +336,8 @@ Fields: **`user_id`**, **`peer_id`**, `domain`, `user_ids`, `message`
 
 Sends a message to user. Will return the message's ID, if successed.
 
+Please be aware that this method will trigger `setOnline` method. To avoid this, simply add `forGodSakePleaseDoNotReportAboutMyOnlineActivity` as field.
+
 ### `delete` 🔰
 
 Fields: **`message_ids`**
@@ -274,6 +383,40 @@ Fields: `need_pts`, `lp_version`, `group_id`
 Returns the address to LongPoll server.
 
 **Check [this](https://vk.com/dev/using_longpoll) if you don't know what is a LongPoll.**
+
+## Notes
+
+### `add` 🔰
+
+Fields: **`title`**, **`text`**, `privacy`, `comment_privacy`, `privacy_view`, `privacy_comment`
+
+### `createComment` 🔰
+
+Fields: **`note_id`**, **`owner_id`**, **`message`**, `reply_to`, `attachments`
+
+### `delete` 🔰
+
+Fields: **`note_id`**
+
+### `deleteComment` 🔰
+
+Fields: **`comment_id`**, `owner_id`
+
+### `edit` 🔰
+
+Fields: **`note_id`**, `title`, `text`, `privacy`, `comment_privacy`, `privacy_view`, `privacy_comment`
+
+### `get` 🔰
+
+Fields: **`user_id`**, `note_ids`, `offset`, `count`, `sort`
+
+### `getById` 🔰
+
+Fields: **`note_id`**, **`owner_id`**, `need_wiki`
+
+### `getComments` 🔰
+
+Fields: **`note_id`**, **`owner_id`**, `sort`, `offset`, `count`
 
 ## Ovk (aka OpenVK specific methods)
 
@@ -408,6 +551,8 @@ Returns a list of comments on a post on a user wall or community wall.
 Fields: `fields`, `start_from` or `offset`, `count`, `extended`
 
 Returns posts from newsfeed.
+
+Please be aware that this method will trigger `setOnline` method. To avoid this, simply add `forGodSakePleaseDoNotReportAboutMyOnlineActivity` as field.
 
 ### `getGlobal` 🔰
 
