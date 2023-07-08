@@ -571,6 +571,36 @@ Fields: **`owner_id`**, **`photo_id`**, `need_likes`, `offset`, `count`, `extend
 
 Returns comments under photo.
 
+### `getUploadServer` 🔰
+
+Returns the server address for sending photos in a POST request.
+
+### `getOwnerPhotoUploadServer` 🔰
+
+Returns the server address for sending avatars in a POST request.
+
+### `getWallUploadServer` 🔰
+
+Returns the server address for sending photos for post in a POST request.
+
+### `save`
+
+Fields: **`photos_list`**, **`hash`**
+
+Saves photos.
+
+### `saveOwnerPhoto`
+
+Fields: **`photo`**, **`hash`**
+
+Saves profile photo.
+
+### `saveWallPhoto`
+
+Fields: **`photo`**, **`hash`**
+
+Saves wall photo.
+
 ## Polls
 
 ### `getById`
