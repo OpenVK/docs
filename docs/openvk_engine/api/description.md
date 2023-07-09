@@ -581,6 +581,8 @@ Returns the server address for sending avatars in a POST request.
 
 ### `getWallUploadServer` 🔰
 
+Fields: **`group_id`**
+
 Returns the server address for sending photos for post in a POST request.
 
 ### `save`
