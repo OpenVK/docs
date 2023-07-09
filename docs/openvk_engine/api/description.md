@@ -577,13 +577,15 @@ Returns the server address for sending photos in a POST request.
 
 ### `getOwnerPhotoUploadServer` 🔰
 
-Returns the server address for sending avatars in a POST request.
+Fields: **`owner_id`**
+
+Returns the server address for sending wall owner photos in a POST request.
 
 ### `getWallUploadServer` 🔰
 
 Fields: **`group_id`**
 
-Returns the server address for sending photos for post in a POST request.
+Returns the server address for sending group photos for post in a POST request.
 
 ### `save`
 
