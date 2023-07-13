@@ -576,7 +576,7 @@ Returns comments under photo.
 Returns the server address for sending photos in a POST request.
 
 !!! caution
-    After receiving the address of the attachment sending server, you must specify the `Content-Type` header with the value `multi-part/form-data` in the request itself, as well as the file in the `photo` data part.
+    After receiving the address of the attachment sending server, you must specify the `Content-Type` header with the value `multi-part/form-data` in the POST request itself, as well as the file in the `photo` data part.
 
 ### `getOwnerPhotoUploadServer` 🔰
 
@@ -585,7 +585,7 @@ Fields: **`owner_id`**
 Returns the server address for sending wall owner photos in a POST request.
 
 !!! caution
-    After receiving the address of the attachment sending server, you must specify the `Content-Type` header with the value `multi-part/form-data` in the request itself, as well as the file in the `photo` data part.
+    After receiving the address of the attachment sending server, you must specify the `Content-Type` header with the value `multi-part/form-data` in the POST request itself, as well as the file in the `photo` data part.
 
 ### `getWallUploadServer` 🔰
 
@@ -594,7 +594,7 @@ Fields: **`group_id`**
 Returns the server address for sending group photos for post in a POST request.
 
 !!! caution
-    After receiving the address of the attachment sending server, you must specify the `Content-Type` header with the value `multi-part/form-data` in the request itself, as well as the file in the `photo` data part.
+    After receiving the address of the attachment sending server, you must specify the `Content-Type` header with the value `multi-part/form-data` in the POST request itself, as well as the file in the `photo` data part.
 
 ### `save`
 
