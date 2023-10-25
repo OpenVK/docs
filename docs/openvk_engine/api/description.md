@@ -498,6 +498,12 @@ Returns information about the instance, including stats, administrators, most po
 
 ## Photos
 
+### `get`
+
+Fields: **`owner_id`**, **`album_id`**, `photo_ids`, `extended`, `photo_sizes`, `offset`, `count`
+
+Returns a list of photos inside the album.
+
 ### `createAlbum` 🔰
 
 Fields: **`title`**, `group_id`, `description`
