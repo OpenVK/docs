@@ -34,13 +34,27 @@ nav:
   - 'OpenVK Engine':
     - 'openvk_engine/about.md'
     - 'API':
-      - 'openvk_engine/api/description.md'
+      - 'ru':
+          - 'objects':
+            - 'Audio Genres': 'openvk_engine/ru/api/objects/audio_genres.md'
+            - 'Audio': 'openvk_engine/ru/api/objects/audio.md'
+            - 'Note': 'openvk_engine/ru/api/objects/note.md'
+            - 'Photo': 'openvk_engine/ru/api/objects/photo.md'
+            - 'Playlist': 'openvk_engine/ru/api/objects/playlist.md'
+            - 'Topic': 'openvk_engine/ru/api/objects/topic.md'
+        - 'openvk_engine/ru/api/description.md'
+      - 'en':
+          - 'objects':
+            - 'Audio Genres': 'openvk_engine/en/api/objects/audio_genres.md'
+            - 'Audio': 'openvk_engine/en/api/objects/audio.md'
+            - 'Playlist': 'openvk_engine/en/api/objects/playlist.md'
+        - 'openvk_engine/en/api/description.md'
     - 'Tutorials':
       - 'openvk_engine/centos8_installation.md'
       - 'openvk_engine/themepack_creation.md'
       - 'openvk_engine/ton_integration.md'
 
-copyright: Copyright &copy; 2021-2022 OpenVK Team and contributors
+copyright: Copyright &copy; 2021-2023 OpenVK Team and contributors
 
 extra:
   social:
@@ -48,7 +62,7 @@ extra:
       link: https://github.com/openvk/openvk
       name: OpenVK on GitHub
     - icon: fontawesome/brands/telegram
-      link: https://t.me/openvkch
+      link: https://t.me/openvk
       name: OpenVK on Telegram
     - icon: fontawesome/brands/mastodon
       link: https://fosstodon.org/@openvk

@@ -90,6 +90,194 @@ Dummy function, always returns `9355263`.
 
 Returns the counters of Unread `Messages`, `Notifications` and `Friends` Requests.
 
+## Audio
+
+### `getById` 🔰
+
+Fields: `audios`, `hash`, `need_user`
+
+Returns audios objects from its ids (like X_Y). With `need_user` = 1 returns audio's owner. 
+
+`hash` allows to get decryption keys
+
+### `isLagtrain`
+
+Fields: `audio_id`
+
+Is this a [Lagtrain](https://www.youtube.com/watch?v=UnIhRpIT7nc)?
+
+### `getRecommendations` 🔰
+
+Dummy.
+
+### `getPopular` 🔰
+
+Fields: `genre_id`, `genre_str`, `offset`, `count`, `hash`
+
+Returns popular audios by its genre (`genre_id`, `genre_str`)
+
+### `getFeed` 🔰
+
+Fields: `genre_id`, `genre_str`, `offset`, `count`, `hash`
+
+Same as `getPopular`.
+
+### `search` 🔰
+
+Fields: `q`, *`auto_complete`*, `lyrics`, `performer_only`, `sort`, *`search_own`*, `offset`, `count`, `hash`
+
+Global search for audios.
+`lyrics` — on 1 returns audios only with lyrics
+`performer_only` — on 1 searches by performer
+`sort` — on 0 — sort by creation time, on 1 — by length, on 2 — by listens
+
+### `getCount` 🔰
+
+Fields: `owner_id`, `uploaded_only`
+
+Returns collection size of user or club. On `uploaded_only` = 1 returns count of uploaded audios by user.
+
+### `get` 🔰
+
+Fields: `owner_id`, `album_id`, `audio_ids`, `need_user`, `offset`, `count`, `uploaded_only`, `need_seed`, `shuffle_seed`, `shuffle`, `hash`
+
+Returns audios.
+With `owner_id` returns user's or group's collection.
+
+With `owner_id` and `uploaded_only` returns uploaded by user audios
+
+With `album_id` returns audios from playlist.
+
+With `audio_ids` returns audios by ids.
+
+With `need_user` in audios objects returns "user".
+
+With `shuffle` = 1 enables shuffling. On `need_seed` = 1 you can set your seed in `shuffle_seed`
+
+### `getLyrics` 🔰
+
+Fields: `lyrics_id`
+
+Returns audios lyrics.
+
+### `beacon` 🔰
+
+Fields: `aid`, `gid`
+
+Broadcasts audio to status. If `gid` is set, broadcasts audio to group (not visible in the interface)
+
+### `setBroadcast` 🔰
+
+Fields: `audio`, `target_ids`
+
+Sets audio broadcast to groups.
+
+### `getBroadcastList` 🔰
+
+Fields: `filter`, *`active`*, `hash`
+
+Returns friends/groups that currently broadcasting music.
+
+On `filter` = all returns friends and groups.
+On `filter` = friends returns only friends.
+При `filter` = groups returns only groups.
+
+### `edit` 🔰
+
+Fields: `owner_id`, `audio_id`, `artist`, `title`, `text`, `genre_id`, `genre_str`, `no_search`
+
+Edit the song.
+`artist` — song's author
+`title` — song's title
+`text` — song's lyrics
+`genre_id` — genre_id
+`genre_str` — genre name
+`no_search` — is audio can found via search?
+
+### `add` 🔰
+
+Fields: `audio_id`, `owner_id`, `group_id`, *`album_id`*
+
+Add audio (`audio_id`, `owner_id`) to users or club (`group_id`) collection
+
+### `delete` 🔰
+
+Fields: `audio_id`, `owner_id`, `group_id`
+
+Delete audio from user's collection (or club's).
+
+### `restore` 🔰
+
+Fields: `audio_id`, `owner_id`, `group_id`, `hash`
+
+Same as audio.add, but also returns audio object.
+
+### `getAlbums` 🔰
+
+Fields: **`owner_id`**, `offset`, `count`, `drop_private`
+
+Returns playlists from user's collection.
+On `drop_private` skips private playlists
+
+### `searchAlbums` 🔰
+
+Fields: **`query`**, `offset`, `limit`, `drop_private`
+
+Global search by albums.
+On `drop_private` skips private albums.
+
+### `addAlbum` 🔰
+
+Fields: `title`, `description`, `group_id`
+
+Creates new playlist and adds to your collection.
+
+On `group_id` creates playlist in group.
+
+### `editAlbum` 🔰
+
+Fields: **`album_id`**, `title`, `description`
+
+Edits playlist's title and descriptions.
+
+### `deleteAlbum` 🔰
+
+Fields: `album_id`
+
+Completely deletes the playlist.
+
+### `moveToAlbum` 🔰
+
+Fields: `album_id`, `audio_ids`
+
+Adds audios to playlist.
+
+### `copyToAlbum` 🔰
+
+Fields: `album_id`, `audio_ids`
+
+Same as audio.moveToAlbum.
+
+### `removeFromAlbum` 🔰
+
+Fields: `album_id`, `audio_ids`
+
+Deletes audios from album.
+
+### `bookmarkAlbum` 🔰
+
+Fields: `id`
+
+Adds album to your collection.
+Returns 1 on success.
+
+### `unbookmarkAlbum` 🔰
+
+Fields: `id`
+
+Deletes album from your collection.
+Returns 1 on success.
+
 ## Board
 
 ### `addTopic` 🔰
@@ -298,7 +486,7 @@ Fields: **`group_id`**, `sort`, `offset`, `count`, `fields`
 
 Returns group's members.
 
-`fields`: `bdate`, `can_post`, `can_see_all_posts`, `can_see_audio` (lol), `can_write_private_message`,`city`, `common_count`, `connections`, `contacts`,`country`, `domain`, `education`, `has_mobile`, `last_seen`, `lists`, `online`, `online_mobile`,`photo_100`, `photo_200`, `photo_200_orig`,`photo_400_orig`, `photo_50`, `photo_max`, `photo_max_orig`, `relation`, `relatives`, `schools`, `sex`, `site`, `status`, `universities`
+`fields`: `bdate`, `can_post`, `can_see_all_posts`, `can_see_audio`, `can_write_private_message`,`city`, `common_count`, `connections`, `contacts`,`country`, `domain`, `education`, `has_mobile`, `last_seen`, `lists`, `online`, `online_mobile`,`photo_100`, `photo_200`, `photo_200_orig`,`photo_400_orig`, `photo_50`, `photo_max`, `photo_max_orig`, `relation`, `relatives`, `schools`, `sex`, `site`, `status`, `universities`
 
 ### `getSettings` 🔰
 
