@@ -506,13 +506,13 @@ Fields: **`q`**, `offset`, `count`
 
 Searches for groups.
 
-### `join`
+### `join` 🔰
 
 Fields: **`group_id`**
 
 Joins the group. Returns 1 on success.
 
-### `leave`
+### `leave` 🔰
 
 Fields: **`group_id`**
 

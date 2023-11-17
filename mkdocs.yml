@@ -35,23 +35,24 @@ nav:
     - 'openvk_engine/about.md'
     - 'API':
       - 'ru':
-          - 'objects':
-            - 'Audio Genres': 'openvk_engine/ru/api/objects/audio_genres.md'
-            - 'Audio': 'openvk_engine/ru/api/objects/audio.md'
-            - 'Note': 'openvk_engine/ru/api/objects/note.md'
-            - 'Photo': 'openvk_engine/ru/api/objects/photo.md'
-            - 'Playlist': 'openvk_engine/ru/api/objects/playlist.md'
-            - 'Topic': 'openvk_engine/ru/api/objects/topic.md'
+          - 'Объекты':
+            - 'Жанры аудиозаписей': 'openvk_engine/ru/api/objects/audio_genres.md'
+            - 'Аудиозапись': 'openvk_engine/ru/api/objects/audio.md'
+            - 'Заметка': 'openvk_engine/ru/api/objects/note.md'
+            - 'Фотография': 'openvk_engine/ru/api/objects/photo.md'
+            - 'Плейлист': 'openvk_engine/ru/api/objects/playlist.md'
+            - 'Обсуждение': 'openvk_engine/ru/api/objects/topic.md'
           - 'openvk_engine/ru/api/description.md'
+          - 'openvk_engine/ru/themepack_creation.md'
       - 'en':
-          - 'objects':
+          - 'Objects':
             - 'Audio Genres': 'openvk_engine/en/api/objects/audio_genres.md'
             - 'Audio': 'openvk_engine/en/api/objects/audio.md'
             - 'Playlist': 'openvk_engine/en/api/objects/playlist.md'
           - 'openvk_engine/en/api/description.md'
+          - 'openvk_engine/en/themepack_creation.md'
     - 'Tutorials':
       - 'openvk_engine/centos8_installation.md'
-      - 'openvk_engine/themepack_creation.md'
       - 'openvk_engine/ton_integration.md'
 
 copyright: Copyright &copy; 2021-2023 OpenVK Team and contributors
