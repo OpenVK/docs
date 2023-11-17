@@ -42,16 +42,16 @@ nav:
           - 'Фотография': 'openvk_engine/ru/api/objects/photo.md'
           - 'Плейлист': 'openvk_engine/ru/api/objects/playlist.md'
           - 'Обсуждение': 'openvk_engine/ru/api/objects/topic.md'
-        - 'openvk_engine/ru/api/description.md'
-        - 'openvk_engine/ru/themepack_creation.md'
+      - 'openvk_engine/ru/api/description.md'
+      - 'openvk_engine/ru/themepack_creation.md'
     - 'en':
       - 'API':
         - 'Objects':
           - 'Audio Genres': 'openvk_engine/en/api/objects/audio_genres.md'
           - 'Audio': 'openvk_engine/en/api/objects/audio.md'
           - 'Playlist': 'openvk_engine/en/api/objects/playlist.md'
-        - 'openvk_engine/en/api/description.md'
-        - 'openvk_engine/en/themepack_creation.md'
+      - 'openvk_engine/en/api/description.md'
+      - 'openvk_engine/en/themepack_creation.md'
     - 'Tutorials':
       - 'openvk_engine/centos8_installation.md'
       - 'openvk_engine/ton_integration.md'
