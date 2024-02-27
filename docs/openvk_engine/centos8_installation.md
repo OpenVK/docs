@@ -94,7 +94,7 @@ dnf -y install --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-fr
 🖥Then install SDL2 and ffmpeg:
 
 ```bash
-dnf -y install http://rpmfind.net/linux/epel/7/x86_64/Packages/s/SDL2-2.0.10-1.el7.x86_64.rpm
+dnf -y install https://rpmfind.net/linux/epel/7/x86_64/Packages/s/SDL2-2.0.14-2.el7.x86_64.rpm
 dnf -y install ffmpeg
 ```
 
