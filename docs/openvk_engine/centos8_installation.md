@@ -32,7 +32,7 @@ dnf -y install https://rpms.remirepo.net/enterprise/remi-release-8.rpm
 🖥Then enable modules that we need:
 
 ```bash
-dnf -y module enable php:remi-8.1
+dnf -y module enable php:remi-8.2
 dnf -y module enable nodejs:14
 ```
 
