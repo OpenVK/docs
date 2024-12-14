@@ -1,0 +1,4 @@
+### `ovk.chickenWings`
+
+**Returns**:
+"крылышки"
