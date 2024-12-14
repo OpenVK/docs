@@ -1,7 +1,7 @@
 # Group object
 
-|Property|Value|Description|
-|--|--|
+| Property | Value | Description |
+|---|---|
 |`id`|int|Club id|
 |`name`|string|Group title|
 |`screen_name`|string|Group's shortcode|

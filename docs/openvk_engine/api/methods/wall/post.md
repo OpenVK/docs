@@ -3,6 +3,7 @@
 Creates post on wall.
 
 **Params**:
+
 |Name|Value|Description|
 |--|--|--|
 |`owner_id`|int|Wall id|
