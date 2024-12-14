@@ -22,7 +22,7 @@ If it says `SELinux status:                 enabled` then SELinux will disturb u
 
 ## Dependencies
 
-🖥Let's install EPEL and Remi repos for PHP 7.4:
+🖥Let's install EPEL and Remi repos for PHP 8.2:
 
 ```bash
 dnf -y install epel-release
@@ -32,7 +32,7 @@ dnf -y install https://rpms.remirepo.net/enterprise/remi-release-8.rpm
 🖥Then enable modules that we need:
 
 ```bash
-dnf -y module enable php:remi-7.4
+dnf -y module enable php:remi-8.2
 dnf -y module enable nodejs:14
 ```
 
