@@ -1,7 +1,7 @@
 # User object
 
 | Property | Value | Description |
-|---|---|
+|---|---|---|
 |`id`|int|User id|
 |`first_name`|string|User first name|
 |`last_name`|string|User last name|
