@@ -5,6 +5,7 @@
 Send votes to user.
 
 **Params**:
+
 |Name|Value|Description|
 |--|--|--|
 |`reciever`|unsigned int|ID of reciever|
