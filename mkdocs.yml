@@ -40,7 +40,7 @@ nav:
         - 'Playlist': 'openvk_engine/api/objects/playlist.md'
         - 'User': 'openvk_engine/api/objects/user.md'
         - 'Group': 'openvk_engine/api/objects/group.md'
-      - 'Methods'
+      - 'Methods':
         - 'Account':
           - 'Account.getProfileInfo': 'openvk_engine/api/methods/account/getProfileInfo.md'
           - 'Account.getInfo': 'openvk_engine/api/methods/account/getInfo.md'
