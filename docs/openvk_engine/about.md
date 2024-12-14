@@ -24,8 +24,7 @@ If you want, you can add your instance to the list above so that people can regi
 
 ### Installation procedure
 
-1. Install PHP 7, web-server, Composer, Node.js, Yarn and [Chandler](https://github.com/openvk/chandler)
-  * PHP 8 has **not** yet been tested, so you should not expect it to work.
+1. Install PHP 8.2, web-server, Composer, Node.js, Yarn and [Chandler](https://github.com/openvk/chandler)
 2. Install [commitcaptcha](https://github.com/openvk/commitcaptcha) and OpenVK as Chandler extensions like this:
 ```
 git clone --recursive https://github.com/openvk/openvk /path/to/chandler/extensions/available/openvk
