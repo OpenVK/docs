@@ -6,25 +6,7 @@ To call the function, you need to go to `{YOUR DOMAIN}/method/` URL, and then, t
 
 🔰 above the function name means it requires authorization.
 
-## Authorization
-
-To get token, you should call the "token" page:
-
-`{YOUR DOMAIN}/token?username={YOUR USERNAME}&password={YOUR PASSWORD}&grant_type=password`
-
-You'll get a response like this:
-
-```json
-{
-    "access_token": "THERE IS A TOKEN. A LONG TOKEN ACTUALLY",
-    "expires_in": 0,
-    "user_id": 1
-}
-```
-
-If you need to call the function that requires a token, just put the `access_token` into your GET or POST request.
-
-If you have two-factor authorization turned on, add a `code` field to your POST request and fill it with, you guessed it, authorization code.
+You can read about authorization [there](authorization.md).
 
 ## Main params
 

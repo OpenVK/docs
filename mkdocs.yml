@@ -33,7 +33,7 @@ nav:
     - 'chandler/installing.md'
   - 'OpenVK Engine':
     - 'openvk_engine/about.md'
-    - 'openvk_engine/themepack_creation.md'
+    - 'openvk_engine/afterinstall.md'
     - 'API':
       - 'Objects':
         - 'Audio Genres': 'openvk_engine/api/objects/audio_genres.md'
@@ -205,9 +205,11 @@ nav:
           - 'wall.repost': 'openvk_engine/api/methods/wall/repost.md'
           - 'wall.unpin': 'openvk_engine/api/methods/wall/unpin.md'
       - 'openvk_engine/api/overview.md'
+      - 'openvk_engine/api/authorization.md'
     - 'Tutorials':
       - 'openvk_engine/centos8_installation.md'
       - 'openvk_engine/ton_integration.md'
+      - 'openvk_engine/themepack_creation.md'
 
 copyright: Copyright &copy; 2021-2025 OpenVK Team and contributors
 
