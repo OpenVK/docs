@@ -178,7 +178,7 @@ nav:
           - 'reports.add': 'openvk_engine/api/methods/reports/add.md'
         - 'Status':
           - 'status.get': 'openvk_engine/api/methods/status/get.md'
-          - 'status.get': 'openvk_engine/api/methods/status/set.md'
+          - 'status.set': 'openvk_engine/api/methods/status/set.md'
         - 'Users':
           - 'users.get': 'openvk_engine/api/methods/users/get.md'
           - 'users.getFollowers': 'openvk_engine/api/methods/users/getFollowers.md'
