@@ -38,6 +38,7 @@ nav:
       - 'Objects':
         - 'Audio Genres': 'openvk_engine/api/objects/audio_genres.md'
         - 'Audio': 'openvk_engine/api/objects/audio.md'
+        - 'Document': 'openvk_engine/api/objects/doc.md'
         - 'Playlist': 'openvk_engine/api/objects/playlist.md'
         - 'User': 'openvk_engine/api/objects/user.md'
         - 'Group': 'openvk_engine/api/objects/group.md'
@@ -88,6 +89,15 @@ nav:
           - 'board.getTopics': 'openvk_engine/api/methods/board/getTopics.md'
           - 'board.openTopic': 'openvk_engine/api/methods/board/openTopic.md'
           - 'board.unfixTopic': 'openvk_engine/api/methods/board/unfixTopic.md'
+        - 'Docs':
+          - 'docs.add': 'openvk_engine/api/methods/docs/add.md'
+          - 'docs.delete': 'openvk_engine/api/methods/docs/delete.md'
+          - 'docs.edit': 'openvk_engine/api/methods/docs/edit.md'
+          - 'docs.get': 'openvk_engine/api/methods/docs/get.md'
+          - 'docs.getById': 'openvk_engine/api/methods/docs/getById.md'
+          - 'docs.getTypes': 'openvk_engine/api/methods/docs/getTypes.md'
+          - 'docs.getTags': 'openvk_engine/api/methods/docs/getTags.md'
+          - 'docs.search': 'openvk_engine/api/methods/docs/search.md'
         - 'Friends':
           - 'friends.add': 'openvk_engine/api/methods/friends/add.md'
           - 'friends.areFriends': 'openvk_engine/api/methods/friends/areFriends.md'
