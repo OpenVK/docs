@@ -25,7 +25,7 @@
 |`email`|string|Users contact email|
 |`telegram`|string|Users telegram|
 |`about`|string|Users description|
-|`rating`|string|Users rating|
+|`rating`|int|Users rating|
 |`correct_counters`|array|Array with user's counters|
 |`background`|array|Background photo urls|
 |`reg_date`|int|User registration date|
