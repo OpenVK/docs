@@ -26,10 +26,21 @@
 |`telegram`|string|Users telegram|
 |`about`|string|Users description|
 |`rating`|int|Users rating|
-|`correct_counters`|array|Array with user's counters|
-|`background`|array|Background photo urls|
+|`correct_counters`|UserCounters object|Array with user's counters|
+|`background`|array[string]|Background photo urls|
 |`reg_date`|int|User registration date|
 |`is_dead`|bool|Is user dead|
 |`nickname`|string|Nickname, or "middle name"|
 |`blacklisted_by_me`|bool|Is blacklisted by current user|
 |`blacklisted`|bool|Is this user blacklisted me|
+
+## UserCounters
+| Property | Value | Description |
+|---|---|---|
+|`friends`|int||
+|`photos`|int||
+|`videos`|int||
+|`audios`|int||
+|`notes`|int||
+|`groups`|int||
+|`online_friends`|int||
