@@ -10,7 +10,8 @@ You'll get a response like this:
 {
     "access_token": "THERE IS A TOKEN. A LONG TOKEN ACTUALLY",
     "expires_in": 0,
-    "user_id": 1
+    "user_id": 1,
+    "secret": "super_secret_value, kept for compatibility with vk api"
 }
 ```
 
