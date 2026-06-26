@@ -43,6 +43,7 @@ nav:
         - 'User': 'openvk_engine/api/objects/user.md'
         - 'Group': 'openvk_engine/api/objects/group.md'
       - 'Methods':
+        - 'execute': 'openvk_engine/api/methods/execute.md'
         - 'Account':
           - 'account.getProfileInfo': 'openvk_engine/api/methods/account/getProfileInfo.md'
           - 'account.getInfo': 'openvk_engine/api/methods/account/getInfo.md'
@@ -77,6 +78,8 @@ nav:
           - 'audio.removeFromAlbum': 'openvk_engine/api/methods/audio/removeFromAlbum.md'
           - 'audio.bookmarkAlbum': 'openvk_engine/api/methods/audio/bookmarkAlbum.md'
           - 'audio.unbookmarkAlbum': 'openvk_engine/api/methods/audio/unbookmarkAlbum.md'
+          - 'audio.getPlaylists': 'openvk_engine/api/methods/audio/getPlaylists.md'
+          - 'audio.getPlaylistById': 'openvk_engine/api/methods/audio/getPlaylistById.md'
         - 'Board':
           - 'board.addTopic': 'openvk_engine/api/methods/board/addTopic.md'
           - 'board.closeTopic': 'openvk_engine/api/methods/board/closeTopic.md'
@@ -142,6 +145,7 @@ nav:
           - 'newsfeed.get': 'openvk_engine/api/methods/newsfeed/get.md'
           - 'newsfeed.getBanned': 'openvk_engine/api/methods/newsfeed/getBanned.md'
           - 'newsfeed.getGlobal': 'openvk_engine/api/methods/newsfeed/getGlobal.md'
+          - 'newsfeed.getRecommended': 'openvk_engine/api/methods/newsfeed/getRecommended.md'
         - 'Notes':
           - 'notes.add': 'openvk_engine/api/methods/notes/add.md'
           - 'notes.createComment': 'openvk_engine/api/methods/notes/createComment.md'
