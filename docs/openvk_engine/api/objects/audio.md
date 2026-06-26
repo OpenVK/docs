@@ -13,7 +13,7 @@
 | keys    | Array   | Keys for manifest.  |
 | genre_id    | int   | Genre id of the track.  |
 | genre_str    | string   | String with genre name.  |
-| lyrics    | int   | You can get actual lyrics by `audio.getLyrics`.  |
+| lyrics_id    | int   | Return current audio if if Lyrics exists. You can get actual lyrics by `audio.getLyrics`.  |
 | added    | bool   | Does the user's collection contain this audio??  |
 | editable    | bool   | Can audio be edited by current user?  |
 | searchable    | bool   | Is it possible to find audio in search?  |
