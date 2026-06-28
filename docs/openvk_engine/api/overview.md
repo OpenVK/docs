@@ -18,7 +18,7 @@ You can read about authorization [there](authorization.md).
 
 ## Tips
 
-- Main instance API URL is `https://ovk.to/method/`
+- Main instance API URL is `https://openvk.org/method/`
 
 - If there is no description of the method you need, check it on https://dev.vk.com/ru/method
 
