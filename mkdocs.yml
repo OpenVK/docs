@@ -225,7 +225,7 @@ nav:
       - 'openvk_engine/ton_integration.md'
       - 'openvk_engine/themepack_creation.md'
 
-copyright: Copyright &copy; 2021-2025 OpenVK Team and contributors
+copyright: Copyright &copy; 2021-2026 OpenVK Team and contributors
 
 extra:
   social:
@@ -238,8 +238,11 @@ extra:
     - icon: fontawesome/brands/mastodon
       link: https://fosstodon.org/@openvk
       name: OpenVK on Mastodon
+    - icon: fontawesome/brands/firefox-browser
+      link: https://openvk.org/openvk
+      name: OpenVK on OpenVK
     - icon: fontawesome/solid/paper-plane
-      link: mailto:openvk@tutanota.com
+      link: mailto:contact@openvk.org
       name: Mail OpenVK
 
 plugins:
