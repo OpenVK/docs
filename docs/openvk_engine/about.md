@@ -4,7 +4,7 @@
 
 VKontakte belongs to Pavel Durov and VK Group.
 
-To be honest, we don't even know whether it even works. However, this version is maintained and we will be happy to accept your bugreports [in our bug-tracker](https://github.com/openvk/openvk/projects/1). You should also be able to submit them using [ticketing system](https://ovk.to/support?act=new) (you will need an OVK account for this).
+To be honest, we don't even know whether it even works. However, this version is maintained and we will be happy to accept your bugreports [in our bug-tracker](https://github.com/openvk/openvk/projects/1). You should also be able to submit them using [ticketing system](https://openvk.org/support?act=new) (you will need an OVK account for this).
 
 ## When's the release?
 
@@ -62,7 +62,7 @@ You also not required to publish source texts of your themepacks and plugins.
 You may reach out to us via:
 
 * [Bug-tracker](https://github.com/openvk/openvk/projects/1)
-* [Ticketing system](https://ovk.to/support?act=new)
+* [Ticketing system](https://openvk.org/support?act=new)
 * Telegram comments: On [our channel](https://t.me/openvk).
 * [Discussions](https://github.com/openvk/openvk/discussions)
 
