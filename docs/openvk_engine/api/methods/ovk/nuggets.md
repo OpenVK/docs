@@ -1,0 +1,4 @@
+### `ovk.nuggets`
+
+**Returns**:
+"котлетки"
