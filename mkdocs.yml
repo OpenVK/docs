@@ -160,6 +160,7 @@ nav:
         - 'Ovk':
           - 'ovk.aboutInstance': 'openvk_engine/api/methods/ovk/aboutInstance.md'
           - 'ovk.chickenWings': 'openvk_engine/api/methods/ovk/chickenWings.md'
+          - 'ovk.getMirrors': 'openvk_engine/api/methods/ovk/getMirrors.md'
           - 'ovk.test': 'openvk_engine/api/methods/ovk/test.md'
           - 'ovk.version': 'openvk_engine/api/methods/ovk/version.md'
         - 'Pay':
