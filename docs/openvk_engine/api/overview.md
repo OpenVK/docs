@@ -12,17 +12,15 @@ You can read about authorization [there](authorization.md).
 
 |Name|Value|Description|
 |--|--|--|
-|`callback`|string|Sets `Content-Type` header to `application/javascript` and wraps json response into function call. This will allow to bypass CORS limits. Not working with `auth_mechanism`=`roaming`.|
+|`callback`|string|Sets `Content-Type` header to `application/javascript` and wraps json response into function call. This will allow to bypass CORS limits. Does not work with `auth_mechanism`=`roaming`.|
 |`forGodSakePleaseDoNotReportAboutMyOnlineActivity`|bool (0, 1)|Do not calls online on some methods|
 |`rss`|bool (0, 1)|If 1, returns data in RSS format (works only with wall.get and newsfeed.getGlobal)|
 
 ## Tips
 
-- Main instance API URL is `https://ovk.to/method/`
+- Main instance API URL is `https://api.openvk.org/method/`
 
-- If there is no description of the method you need, check it on https://dev.vk.com/ru/method
-
-- Don't try to use `execute`, it's not supported yet.
+- If there is no description of the method you need, check it on https://dev.vk.ru/ru/method
 
 - To set group, add minus to id
 
