@@ -10,11 +10,21 @@ You can read about authorization [there](authorization.md).
 
 ## Main params
 
-|Name|Value|Description|
-|--|--|--|
-|`callback`|string|Sets `Content-Type` header to `application/javascript` and wraps json response into function call. This will allow to bypass CORS limits. Does not work with `auth_mechanism`=`roaming`.|
-|`forGodSakePleaseDoNotReportAboutMyOnlineActivity`|bool (0, 1)|Do not calls online on some methods|
-|`rss`|bool (0, 1)|If 1, returns data in RSS format (works only with wall.get and newsfeed.getGlobal)|
+There are three types of return format.
+
+### Plain JSON
+
+JSON is default. That's it.
+
+### Callback
+
+Sets `Content-Type` header to `application/javascript` and wraps json response into function call. This will allow to bypass CORS limits. Does not work with `auth_mechanism`=`roaming`.
+
+### MessagePack
+
+That's what VK was started using recently. They're hyperfixed with it.
+
+Set `X-Response-Format` to `msgpack` to get response in MessagePack formats.
 
 ## Tips
 
@@ -23,6 +33,16 @@ You can read about authorization [there](authorization.md).
 - If there is no description of the method you need, check it on https://dev.vk.ru/ru/method
 
 - To set group, add minus to id
+
+### Adapting your app from VK?
+
+- **Report any inconsistency in the responses to OpenVK developers.** They're trying hard to correct API responses as close as possible.
+
+- Replace `api.vk.ru` and `oauth.vk.ru` to just one domain that user can select or type by themself. We recommend using `api.openvk.org` as default instance.
+
+- In Post object, there's an `explicit` integer parameter. If it's 1, well, it contains NSFW content and it's content should be blurred or hidden behind some kind of button. To prefer user's settings, check [account.getOvkSettings](/docs/openvk_engine/api/methods/account/getOvkSettings) and `nsfw_tolerance` parameter.
+
+- Some instances have multiple domains. To get a list of it and correctly redirect links to app deeplinks, use [ovk.getMirrors](/docs/openvk_engine/api/methods/ovk/getMirrors) method.
 
 ## Error
 

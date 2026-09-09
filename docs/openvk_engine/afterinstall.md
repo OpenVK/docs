@@ -4,6 +4,8 @@
 
 You forgot to apply migration files from %openvk%/install/sqls. <!--To not import all files separately, you may merge them into one file. On Windows: copy *.sql all.sql On UNIX: cat *.sql > .all.sql-->
 
+You can do this via our CLI script: `./openvkctl upgrade --quick`
+
 **Page infinitely reloads**
 
 Set "security" -> "secret" on %chandler%/chandler.yml.

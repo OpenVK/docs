@@ -30,7 +30,6 @@ nav:
   - 'Main page': 'index.md'
   - Chandler:
     - 'chandler/about.md'
-    - 'chandler/installing.md'
   - 'OpenVK Engine':
     - 'openvk_engine/about.md'
     - 'openvk_engine/afterinstall.md'

@@ -41,8 +41,8 @@
 |---|---|---|
 |1	|`mobile` | Mobile app |
 |2	|`iphone` | App for iPhone|
-|3	|`ipad` | App for iPad __Currently not used__|
+|3	|`ipad` | App for iPad|
 |4	|`android`|	App for Android|
-|5	|`wphone`| App for Windows Phone. __Currently not used__|
-|6	|`windows`|	App for Windows 8. __Currently not used__|
+|5	|`wphone`| App for Windows Phone._|
+|6	|`windows`|	App for Windows 8.|
 |7	|`web`	|Website or unknown app|

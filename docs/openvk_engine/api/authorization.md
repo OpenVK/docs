@@ -24,20 +24,27 @@ If you need to call the function that requires a token, just put the `access_tok
 
 If you have two-factor authorization turned on, either sumbit the code via `request_uri` in Webview and then grab it via `blank.html` or pass the 2FA code to the `code` field.
 
-### Client name
+### Client ID/name
 
 At this moment, OpenVK API apps are not implemented. But you can set client name for your token: for this, pass `client_name` param at token endpoint. This name will be seen in some parts of site (online mark and post).
 
-OpenVK might recognize your app if it was originally made for VK and your `client_id` was passed while signing in. This works with official VK apps and Kate Mobile.
+OpenVK might recognize your app if it was originally made for VK and your `client_id` was passed while signing in. This works with official, semi-official and unofficial VK apps.
 
-Currently (at the moment of [this commit](https://github.com/OpenVK/openvk/commit/ccaee757b335be60686b738869f38f61ac6a222a)) these client IDs can be recognized:
+Currently (at the moment of [this commit](https://github.com/OpenVK/openvk/commit/0c2560f919987d7805534ee6124c5673d7e7e630)) these client IDs can be recognized:
 
 | Client ID | Name |
 |----------|----------|
-|4083558|VFeed|
-|2685278|Kate Mobile|
-|3680547|VK for iOS|
 |2274003|VK for Android|
+|2685278|Kate Mobile|
+|3034484|VK for iPad|
+|3140623|VK for iPhone|
+|3502561|VK for Windows 8|
+|3680547|VK for iOS|
+|3697615|VK for Windows|
+|4083558|VFeed|
+|5027722|VK for Windows Phone|
+|5030499|VK Messenger|
+|6146827|VK Me|
 
 ## OAuth
 
