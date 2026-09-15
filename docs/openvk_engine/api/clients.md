@@ -8,6 +8,7 @@ There's a list of all OpenVK clients, including community mods.
 |---|---|---|
 | OpenVK Legacy  | Android 2.1+  |  [Latest version from GitHub](https://github.com/OpenVK/mobile-android-legacy/releases), [F-Droid](https://f-droid.org/ru/packages/uk.openvk.android.legacy)  |
 | OpenVK Refresh  | Android 5.0+  | [Latest version from GitHub](https://github.com/OpenVK/mobile-android-refresh/releases)  |
+| OpenVK Flux  | Android  | [Latest version from GitHub](https://github.com/nikanikoo/flux-android/releases)  |
 | OpenVK  | iOS 15.0+  | [Latest version from GitHub](https://github.com/OpenVK/mobile-ios/releases), App Store coming soon  |
 
 ## Community apps
