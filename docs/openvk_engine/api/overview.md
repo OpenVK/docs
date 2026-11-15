@@ -40,9 +40,9 @@ Set `X-Response-Format` to `msgpack` to get response in MessagePack formats.
 
 - Replace `api.vk.ru` and `oauth.vk.ru` to just one domain that user can select or type by themself. We recommend using `api.openvk.org` as default instance.
 
-- In Post object, there's an `explicit` integer parameter. If it's 1, well, it contains NSFW content and it's content should be blurred or hidden behind some kind of button. To prefer user's settings, check [account.getOvkSettings](/docs/openvk_engine/api/methods/account/getOvkSettings) and `nsfw_tolerance` parameter.
+- In Post object, there's an `explicit` integer parameter. If it's 1, well, it contains NSFW content and it's content should be blurred or hidden behind some kind of button. To prefer user's settings, check [account.getOvkSettings](methods/account/getOvkSettings.md) and `nsfw_tolerance` parameter.
 
-- Some instances have multiple domains. To get a list of it and correctly redirect links to app deeplinks, use [ovk.getMirrors](/docs/openvk_engine/api/methods/ovk/getMirrors) method.
+- Some instances have multiple domains. To get a list of it and correctly redirect links to app deeplinks, use [ovk.getMirrors](methods/ovk/getMirrors.md) method.
 
 ## Error
 
