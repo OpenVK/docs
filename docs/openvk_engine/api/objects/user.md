@@ -26,14 +26,31 @@
 |`email`|string|Users contact email|
 |`telegram`|string|Users telegram|
 |`about`|string|Users description|
-|`rating`|string|Users rating|
-|`counters` or `correct_counters`|array|Array with user's counters|
-|`background`|array|Background photo urls|
+|`rating`|int|Users rating|
+|`counters` or `correct_counters`|object|User counters object (response key is always `counters`)|
+|`background`|array|Up to two background photo urls, or `null` if not set|
 |`reg_date`|int|User registration date|
 |`is_dead`|bool|Is user dead|
 |`nickname`|string|Nickname, or "middle name"|
 |`blacklisted_by_me`|bool|Is blacklisted by current user|
 |`blacklisted`|bool|Is this user blacklisted me|
+
+## UserCounters
+
+| Property | Value | Description |
+|---|---|---|
+|`friends`|int|Friends count|
+|`photos`|int|Photos count|
+|`videos`|int|Videos count|
+|`audios`|int|Audios count|
+|`notes`|int|Notes count|
+|`groups`|int|Groups count|
+|`online_friends`|int|Online friends count|
+|`mutual_friends`|int|Always `0`, not implemented|
+|`user_photos`|int|Always `0`, not implemented|
+|`albums`|int|Albums count|
+|`followers`|int|Followers count|
+|`gifts`|int|Gifts count|
 
 ## Platforms
 
